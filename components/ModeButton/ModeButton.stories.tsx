@@ -25,7 +25,7 @@ const meta: Meta<typeof ModeButton> = {
 type Story = StoryObj<typeof ModeButton>
 
 export const Default: Story = {
-  render: (args) => <ModeButton {...args} />,
+  render: () => <ModeButton/>,
 }
 
 export default meta
