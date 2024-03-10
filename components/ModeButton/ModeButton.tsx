@@ -1,13 +1,13 @@
 import { Moon, Sun } from "lucide-react"
 import * as React from "react"
 
-import { ModeItem } from "components/ModeButton/ModeItem"
-import { Button } from "components/ui/Button/Button"
+import { Button } from "components/Button/Button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "components/ui/dropdown-menu"
+} from "components/dropdown-menu"
+import { ModeItem } from "components/ModeButton/ModeItem"
 
 export function ModeButton() {
 
