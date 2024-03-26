@@ -4,7 +4,7 @@ import * as React from "react"
 
 import {
   DropdownMenuItem,
-} from "components/dropdown-menu"
+} from "components/ui/dropdown-menu"
 import { capitalizeFirstLetter } from 'lib/utils'
 
 export interface ModeItemProps {

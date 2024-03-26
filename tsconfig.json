@@ -19,8 +19,9 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "components/*": ["components/ui/*"],
+      "components/*": ["components/*"],
       "images/*": ["assets/images/*"],
+      "svgs/*": ["assets/svgs/*"],
       "utils/*": ["lib/utils"],
 
     },

@@ -2,8 +2,11 @@ import { Metadata } from "next"
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from "components/ui/button"
+import { TabsTrigger, TabsList, TabsContent, Tabs } from "components/ui/tabs"
 import { LP_GRID_ITEMS } from "lp-items"
-import heroPic from '../assets/images/hero.png'
+import heroPic from 'images/hero.png'
+import { HeroSection } from 'components/HeroSection/HeroSection'
+import { Logo } from 'components/Logo/Logo'
 
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",
@@ -26,43 +29,65 @@ export default function Web() {
   return (
     <>
       <section className="w-full py-12">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <Image
-              alt="Hero"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
-              height="550"
-              src={heroPic}
-              width="550"
-            />
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  The complete platform for building the Web
-                </h1>
-                <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Give your team the toolkit to stop configuring and start innovating. Securely build, deploy, and scale
-                  the best web experiences.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link
-                  className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                  href="#"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                  href="#"
-                >
-                  Contact Sales
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        <HeroSection />
       </section>
+      <section className="w-full py-12">
+        <Logo />
+      </section>
+      <section className="flex w-full py-12 px-24 h-700px gap-16">
+        <Image
+          alt="Image"
+          className="flex-1 py-16   rounded-xl object-cover object-center"
+          height="300"
+          src={heroPic}
+          width="400"
+        />
+        <Tabs className="flex-1 w-0.5 " defaultValue="solution-architecture">
+          <TabsList className="grid grid-cols-3 gap-4">
+            <TabsTrigger value="solution-architecture">Solution Architecture</TabsTrigger>
+            <TabsTrigger value="computer-engineering">Computer Engineering</TabsTrigger>
+            <TabsTrigger value="3d">3D Technology</TabsTrigger>
+          </TabsList>
+          <TabsContent value="solution-architecture">
+                <div className="flex flex-col space-y-4 h-80">
+                  <div className="space-y-2">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">The Future of Computing</h2>
+                  </div>
+                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    Harness the power of the cloud. Our platform provides scalable solutions for your business. Whether
+                    you're a small startup or a large enterprise, we've got you covered. Let us handle the infrastructure so
+                    you can focus on innovation.
+                  </p>
+                </div>
+          </TabsContent>
+          <TabsContent value="computer-engineering">
+                <div className="flex flex-col space-y-4 h-80">
+                  <div className="space-y-2">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Computer Engineering</h2>
+                  </div>
+                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    of perfectly hunter golden basket expect product itself mice avoid clean may plant explain present shirt double handle shine volume rope voyage smooth thou
+                    Harness the power of the cloud. Our platform provides scalable solutions for your business. Whether
+                    you're a small startup or a large enterprise, we've got you covered. Let us handle the infrastructure so
+                    you can focus on innovation.
+                  </p>
+                </div>
+          </TabsContent>
+          <TabsContent value="3d">
+                <div className="flex flex-col space-y-4 h-80">
+                  <div className="space-y-2">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">3D Technology</h2>
+                  </div>
+                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    Harness the power of the cloud. Our platform provides scalable solutions for your business. Whether
+                    you're a small startup or a large enterprise, we've got you covered. Let us handle the infrastructure so
+                    you can focus on innovation.
+                  </p>
+                </div>
+          </TabsContent>
+        </Tabs>
+      </section>
+
 
       <section className="bg-white dark:bg-gray-900">
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
@@ -82,3 +107,7 @@ export default function Web() {
     </>
   )
 }
+
+
+
+
