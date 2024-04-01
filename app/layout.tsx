@@ -1,6 +1,7 @@
 import "styles/tailwind.css"
 import "app/globals.css"
 
+import { Navbar } from 'components/NavMenu/Navbar'
 import { ThemeProvider } from "components/theme-provider"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -11,7 +12,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
-          >
+      >
+        <Navbar />
             {children}
           </ThemeProvider></body>
     </html>

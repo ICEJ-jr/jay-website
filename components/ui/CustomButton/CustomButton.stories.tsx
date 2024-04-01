@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { Button } from "./Button"
+import { CustomButton } from "./CustomButton"
 
-const meta: Meta<typeof Button> = {
-  title: "Button",
-  component: Button,
+const meta: Meta<typeof CustomButton> = {
+  title: "CustomButton",
+  component: CustomButton,
   args: {
     // intent: "primary",
     // underline: false,
-    children: "Button",
+    children: "CustomButton",
     size: "lg",
   },
   argTypes: {
@@ -22,10 +22,10 @@ const meta: Meta<typeof Button> = {
   },
 }
 
-type Story = StoryObj<typeof Button>
+type Story = StoryObj<typeof CustomButton>
 
 export const Default: Story = {
-  render: (args) => <Button {...args} />,
+  render: (args) => <CustomButton {...args} />,
 }
 
 export default meta

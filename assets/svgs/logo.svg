@@ -1,0 +1,15 @@
+<svg
+    className="h-24 w-auto text-[#333]"
+    height="8"
+    viewBox="0 0 32 32"
+    width="32"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <g fill="none" fillRule="evenodd">
+    <text fill="text-white" fontFamily="EB Garamond" fontSize="2" fontWeight="400" letterSpacing="-0.01em">
+        <tspan x="4" y="20">
+        IceJ
+        </tspan>
+    </text>
+    </g>
+</svg>
