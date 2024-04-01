@@ -1,5 +1,5 @@
-import { ReactRenderer, type Preview  } from "@storybook/react"
-import { withThemeByClassName } from '@storybook/addon-themes';
+import { ReactRenderer, type Preview } from "@storybook/react"
+import { withThemeByClassName } from "@storybook/addon-themes"
 
 // import "../styles/tailwind.css"
 import "../app/globals.css"
@@ -17,13 +17,13 @@ const preview: Preview = {
   decorators: [
     withThemeByClassName<ReactRenderer>({
       themes: {
-        light: 'light',
-        dark: 'dark',
-        system: 'system',
+        light: "light",
+        dark: "dark",
+        system: "system",
       },
-      defaultTheme: 'system',
+      defaultTheme: "system",
     }),
-   ]
+  ],
 }
 
 export default preview

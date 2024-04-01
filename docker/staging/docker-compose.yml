@@ -5,6 +5,8 @@ services:
     build:
       context: ../../
       dockerfile: docker/staging/Dockerfile
+      args:
+        - env=test
     image: with-docker-multi-env-staging
     ports:
       - "3002:3000"

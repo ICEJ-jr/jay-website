@@ -5,6 +5,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function capitalizeFirstLetter(s : string) {
-    return s.charAt(0).toUpperCase() + s.slice(1);
+export function capitalizeFirstLetter(s: string) {
+  return s.charAt(0).toUpperCase() + s.slice(1)
 }

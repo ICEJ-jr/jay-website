@@ -5,6 +5,8 @@ services:
     build:
       context: ../../
       dockerfile: docker/production/Dockerfile
+      args:
+        - env=production
     image: with-docker-multi-env-production
     ports:
       - "3003:3000"
