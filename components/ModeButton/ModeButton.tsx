@@ -10,7 +10,6 @@ import {
 } from "components/ui/dropdown-menu"
 
 export function ModeButton() {
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -21,9 +20,9 @@ export function ModeButton() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <ModeItem mode='light'/>
-        <ModeItem mode='dark'/>
-        <ModeItem mode='system'/>
+        <ModeItem mode="light" />
+        <ModeItem mode="dark" />
+        <ModeItem mode="system" />
       </DropdownMenuContent>
     </DropdownMenu>
   )
