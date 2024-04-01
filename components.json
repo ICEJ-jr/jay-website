@@ -12,6 +12,9 @@
   },
   "aliases": {
     "components": "components",
+    "images": [
+            "assets/images/*"
+          ],
     "utils": "lib/utils"
   }
 }

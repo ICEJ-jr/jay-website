@@ -1,6 +1,12 @@
 import { Metadata } from "next"
+import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from "components/ui/button"
+import { TabsTrigger, TabsList, TabsContent, Tabs } from "components/ui/tabs"
 import { LP_GRID_ITEMS } from "lp-items"
+import heroPic from 'images/hero.png'
+import { HeroSection } from 'components/HeroSection/HeroSection'
+import { Logo } from 'components/Logo/Logo'
 
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",
@@ -22,29 +28,67 @@ export const metadata: Metadata = {
 export default function Web() {
   return (
     <>
-      <section className="bg-white dark:bg-gray-900">
-        <div className="mx-auto grid max-w-screen-xl px-4 py-8 text-center lg:py-16">
-          <div className="mx-auto place-self-center">
-            <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight dark:text-white md:text-5xl xl:text-6xl">
-              Next.js Enterprise Boilerplate
-            </h1>
-            <p className="mb-6 max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:mb-8 lg:text-xl">
-              Jumpstart your enterprise project with our feature-packed, high-performance Next.js boilerplate!
-              Experience rapid UI development, AI-powered code reviews, and an extensive suite of tools for a smooth and
-              enjoyable development process.
-            </p>
-            <Button href="https://github.com/Blazity/next-enterprise" className="mr-3">
-              Get started
-            </Button>
-            <Button
-              href="https://vercel.com/new/git/external?repository-url=https://github.com/Blazity/next-enterprise"
-              intent="secondary"
-            >
-              Deploy Now
-            </Button>
-          </div>
-        </div>
+      <section className="w-full py-12">
+        <HeroSection />
       </section>
+      <section className="w-full py-12">
+        <Logo />
+      </section>
+      <section className="flex w-full py-12 px-24 h-700px gap-16">
+        <Image
+          alt="Image"
+          className="flex-1 py-16   rounded-xl object-cover object-center"
+          height="300"
+          src={heroPic}
+          width="400"
+        />
+        <Tabs className="flex-1 w-0.5 " defaultValue="solution-architecture">
+          <TabsList className="grid grid-cols-3 gap-4">
+            <TabsTrigger value="solution-architecture">Solution Architecture</TabsTrigger>
+            <TabsTrigger value="computer-engineering">Computer Engineering</TabsTrigger>
+            <TabsTrigger value="3d">3D Technology</TabsTrigger>
+          </TabsList>
+          <TabsContent value="solution-architecture">
+                <div className="flex flex-col space-y-4 h-80">
+                  <div className="space-y-2">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">The Future of Computing</h2>
+                  </div>
+                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    Harness the power of the cloud. Our platform provides scalable solutions for your business. Whether
+                    you're a small startup or a large enterprise, we've got you covered. Let us handle the infrastructure so
+                    you can focus on innovation.
+                  </p>
+                </div>
+          </TabsContent>
+          <TabsContent value="computer-engineering">
+                <div className="flex flex-col space-y-4 h-80">
+                  <div className="space-y-2">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Computer Engineering</h2>
+                  </div>
+                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    of perfectly hunter golden basket expect product itself mice avoid clean may plant explain present shirt double handle shine volume rope voyage smooth thou
+                    Harness the power of the cloud. Our platform provides scalable solutions for your business. Whether
+                    you're a small startup or a large enterprise, we've got you covered. Let us handle the infrastructure so
+                    you can focus on innovation.
+                  </p>
+                </div>
+          </TabsContent>
+          <TabsContent value="3d">
+                <div className="flex flex-col space-y-4 h-80">
+                  <div className="space-y-2">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">3D Technology</h2>
+                  </div>
+                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    Harness the power of the cloud. Our platform provides scalable solutions for your business. Whether
+                    you're a small startup or a large enterprise, we've got you covered. Let us handle the infrastructure so
+                    you can focus on innovation.
+                  </p>
+                </div>
+          </TabsContent>
+        </Tabs>
+      </section>
+
+
       <section className="bg-white dark:bg-gray-900">
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
           <div className="justify-center space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
@@ -63,3 +107,7 @@ export default function Web() {
     </>
   )
 }
+
+
+
+

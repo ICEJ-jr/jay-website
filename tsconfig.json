@@ -18,6 +18,13 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
+    "paths": {
+      "components/*": ["components/*"],
+      "images/*": ["assets/images/*"],
+      "svgs/*": ["assets/svgs/*"],
+      "utils/*": ["lib/utils"],
+
+    },
     "types": ["node", "jest", "@testing-library/jest-dom"],
     "plugins": [
       {
