@@ -36,3 +36,4 @@ yarn-error.log*
 
 # my local files
 *-local*
+docker/*
